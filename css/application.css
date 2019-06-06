@@ -3,7 +3,7 @@
 ***************************************************/
 @font-face {
   font-family: "Wavehaus";
-  src: url("../../fonts/Wavehaus/Wavehaus-158ExtraBold.otf") format("otf");
+  src: url("../../fonts/Wavehaus/Wavehaus-158ExtraBold.otf") format("otf"), url("../../fonts/Wavehaus/wavehaus-158Extrabold.woff2") format("woff");
   font-weight: 900;
   font-style: regular;
 }
@@ -17,13 +17,13 @@
 
 @font-face {
   font-family: "Crete Round";
-  src: url("../../fonts/CreteRound/CreteRound-Regular.ttf") format("ttf");
+  src: url("../../fonts/CreteRound/CreteRound-Regular.ttf") format("truetype"), url("../../fonts/CreteRound/CreteRound-Regular.woff") format("woff");
   font-style: regular;
 }
 
 @font-face {
   font-family: "Crete Round";
-  src: url("../../fonts/CreteRound/CreteRound-Italic.ttf") format("ttf");
+  src: url("../../fonts/CreteRound/CreteRound-Italic.ttf") format("truetype");
   font-style: italic;
 }
 
@@ -56,7 +56,7 @@
 ********** BASE
 ***************************************************/
 body {
-  background-color: rgba(245, 220, 197, 0.4);
+  background-color: white;
   font-family: "Crete Round", Arial;
   line-height: 1.2;
   letter-spacing: normal;
@@ -106,7 +106,7 @@ p, article {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(245, 220, 197, 0.4);
   border-left: 5px solid #000;
 }
 
@@ -271,7 +271,7 @@ p, article {
 ********** NAV
 ***************************************************/
 .nav {
-  margin: 350px 0 30vh;
+  margin: 21.875em 0 15.625em;
 }
 
 .nav__title {

@@ -4,7 +4,7 @@
 
 
 .nav {
-    margin: px-to-em(350) 0 px-to-em(250);
+    margin: px-to-em(350px) 0 px-to-em(250px);
 
     @include e(title) {
         user-select: none;
@@ -18,7 +18,7 @@
             letter-spacing: 2px;
             font-size: map-get($font-sizes, "xl");
             text-align: left;
-            @media (min-width: $brk-sm) {
+            @media (min-width: map-get($brk, "sm")) {
                 font-size: map-get($font-sizes, "xxl");
             }
         }

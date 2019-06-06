@@ -3,7 +3,8 @@
 ***************************************************/
 
 
-$bg-color               :       rgba(245, 220, 197, 0.4);
+$bg-color                       :       rgba(255, 255, 255, 1);
+$article-bg-color               :       rgba(245, 220, 197, 0.4);
 
 $colors                 :       (
                                     "primary"   :       rgba(80, 24, 239, 0.8),
@@ -50,8 +51,6 @@ $alignments             :       (
                                     center,
                                     baseline
                                 );
-
-$brk-sm                 :       500px;
 
 $brk                    :       (
                                     "xs"    :     0px,
