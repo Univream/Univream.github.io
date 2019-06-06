@@ -11,18 +11,38 @@
     position: relative;
 
     @include e(body) {
-        background: url("../../img/backgroundMesh.svg");
-        background-size: auto;
-        padding: px-to-em(5px);
-        font-weight: map-get($font-weights, "regular");
-        margin: px-to-em(10px);
+        position: relative;
+
+        @include e(title) {
+            position: relative;
+            font-size: map-get($font-sizes, "lg");
+            position: relative;
+            font-weight: map-get($font-weights, "light");
+        }
+        
+        @include e(text) {
+            padding: px-to-em(5px);
+            font-weight: map-get($font-weights, "regular");
+            margin: px-to-em(10px);
+        }
+
+        @include e(callout) {
+        }
     }
 
-    @include e(title) {
-        font-size: map-get($font-sizes, "lg");
-        position: relative;
-        font-weight: map-get($font-weights, "light");
+
+    @include e(backmesh) {
+        z-index: -2;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.8);
+        border-left: 5px solid $primary--font-color;
     }
+
+    
     
     @each $align in $alignments {
         @include m($align) {
@@ -30,9 +50,7 @@
         }
     }
 
-    @include m(callout) {
-
-    }
+    
     // TODO: add underlay
     // TODO: add title
 }

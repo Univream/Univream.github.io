@@ -4,7 +4,7 @@
 
 
 .nav {
-    margin: 40vh 0;
+    margin: px-to-em(350) 0 px-to-em(250);
 
     @include e(title) {
         user-select: none;

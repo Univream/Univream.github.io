@@ -56,7 +56,7 @@
 ********** BASE
 ***************************************************/
 body {
-  background-color: rgba(245, 220, 197, 0.6);
+  background-color: rgba(245, 220, 197, 0.4);
   font-family: "Crete Round", Arial;
   line-height: 1.2;
   letter-spacing: normal;
@@ -83,17 +83,31 @@ p, article {
 }
 
 .article__body {
-  background: url("../../img/backgroundMesh.svg");
-  background-size: auto;
+  position: relative;
+}
+
+.article__body__title {
+  position: relative;
+  font-size: 2em;
+  position: relative;
+  font-weight: 300;
+}
+
+.article__body__text {
   padding: 0.3125em;
   font-weight: 500;
   margin: 0.625em;
 }
 
-.article__title {
-  font-size: 2em;
-  position: relative;
-  font-weight: 300;
+.article__backmesh {
+  z-index: -2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.8);
+  border-left: 5px solid #000;
 }
 
 .article--flex-end {
@@ -117,27 +131,27 @@ p, article {
 ***************************************************/
 .particle {
   position: relative;
-  z-index: -1;
+  z-index: -10;
 }
 
 .particle--sm {
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 .particle--md {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .particle--lg {
-  -webkit-transform: scale(2);
-          transform: scale(2);
+  -webkit-transform: scale(2.4);
+          transform: scale(2.4);
 }
 
 .particle--xl {
-  -webkit-transform: scale(3);
-          transform: scale(3);
+  -webkit-transform: scale(3.7);
+          transform: scale(3.7);
 }
 
 .particle--primary {
@@ -153,6 +167,11 @@ p, article {
 .particle--teriary {
   fill: rgba(233, 88, 201, 0.8);
   color: rgba(233, 88, 201, 0.8);
+}
+
+.particle--quaternary {
+  fill: rgba(237, 52, 74, 0.8);
+  color: rgba(237, 52, 74, 0.8);
 }
 
 /**************************************************
@@ -176,7 +195,7 @@ p, article {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
-  min-width: 470px;
+  min-width: 590px;
   max-width: 680px;
 }
 
@@ -220,6 +239,14 @@ p, article {
   background: rgba(233, 88, 201, 0.8);
 }
 
+.list__item--quaternary {
+  border: 3px solid rgba(237, 52, 74, 0.8);
+}
+
+.list__item--quaternary--filled {
+  background: rgba(237, 52, 74, 0.8);
+}
+
 /**************************************************
 ********** MAIN
 ***************************************************/
@@ -244,7 +271,7 @@ p, article {
 ********** NAV
 ***************************************************/
 .nav {
-  margin: 40vh 0;
+  margin: 350px 0 30vh;
 }
 
 .nav__title {
