@@ -3,7 +3,7 @@
 ***************************************************/
 @font-face {
   font-family: "Wavehaus";
-  src: url("../../fonts/Wavehaus/Wavehaus-158ExtraBold.otf") format("otf"), url("../../fonts/Wavehaus/wavehaus-158Extrabold.woff2") format("woff");
+  src: url("../../fonts/Wavehaus/Wavehaus-158ExtraBold.otf") format("otf"), url("../../fonts/Wavehaus/wavehaus-158extrabold.woff2") format("woff");
   font-weight: 900;
   font-style: regular;
 }
@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: "Crete Round";
-  src: url("../../fonts/CreteRound/CreteRound-Regular.ttf") format("truetype"), url("../../fonts/CreteRound/CreteRound-Regular.woff") format("woff");
+  src: url("../../fonts/CreteRound/CreteRound-Regular.ttf") format("truetype");
   font-style: regular;
 }
 
