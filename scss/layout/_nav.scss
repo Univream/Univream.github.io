@@ -1,0 +1,34 @@
+/**************************************************
+********** NAV
+***************************************************/
+
+
+.nav {
+    margin: 40vh 0;
+
+    @include e(title) {
+        user-select: none;
+        font-size: map-get($font-sizes, "lg");
+        transition: .4s cubic-bezier(.5,.69,.17,.97);
+        margin: 0;
+
+        @include m(main) {
+            display: inline-block;
+            width: 60vw;
+            letter-spacing: 2px;
+            font-size: map-get($font-sizes, "xl");
+            text-align: left;
+            @media (min-width: $brk-sm) {
+                font-size: map-get($font-sizes, "xxl");
+            }
+        }
+    }
+
+    @include e(bar) {
+        margin: px-to-em(20px) 0 px-to-em(20px) px-to-em(10px);
+        padding: 0;
+        float: left;
+        overflow-x: scroll; 
+        width: 95%
+    }
+}

@@ -1,0 +1,45 @@
+/**************************************************
+********** LIST
+***************************************************/
+
+
+.list {
+    @extend %disable-scrollbars;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    margin: px-to-em(10px) 0;
+
+    @include m(horizontal) {
+        flex-direction: row;
+        width: 100%;
+        min-width: 470px;
+        max-width: 680px;
+    }
+
+    @include m(vertical) {
+        flex-direction: column;
+    }
+
+    @include e(item) {
+        display: inline-block;
+        padding: px-to-em(8px);
+        border-radius: px-to-em(38px);
+        vertical-align: baseline;
+        font-family: $primary--font-stack;
+        font-size: px-to-em(22px);
+
+        @each $name, $color in $colors {
+            @include m($name) {
+                border: 3px solid $color;
+
+                @include m(filled) {
+                    background: $color;
+                }
+            }
+        }       
+        
+        
+    }
+}

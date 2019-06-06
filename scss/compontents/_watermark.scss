@@ -1,0 +1,10 @@
+/**************************************************
+********** Watermark
+***************************************************/
+
+
+.watermark {
+    font-size: map-get($font-sizes, "xxl");
+    color: $secondary--font-color;
+    font-family: $secondary--font-stack;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "kohlenstoff",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass scss:css",
+    "start"  : "http-server"
+  },
+  "author": "Hakim Rachidi",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "rellax": "^1.9.1"
+  }
+}

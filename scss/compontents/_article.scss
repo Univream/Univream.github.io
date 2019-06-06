@@ -1,0 +1,38 @@
+/**************************************************
+********** ARTICLE
+***************************************************/
+
+
+.article {
+    margin: px-to-em(60px) px-to-em(10px);
+    padding: px-to-em(10px);
+    max-width: 500px;
+    width: 70vw;
+    position: relative;
+
+    @include e(body) {
+        background: url("../../img/backgroundMesh.svg");
+        background-size: auto;
+        padding: px-to-em(5px);
+        font-weight: map-get($font-weights, "regular");
+        margin: px-to-em(10px);
+    }
+
+    @include e(title) {
+        font-size: map-get($font-sizes, "lg");
+        position: relative;
+        font-weight: map-get($font-weights, "light");
+    }
+    
+    @each $align in $alignments {
+        @include m($align) {
+            align-self: $align;
+        }
+    }
+
+    @include m(callout) {
+
+    }
+    // TODO: add underlay
+    // TODO: add title
+}

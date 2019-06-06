@@ -1,0 +1,69 @@
+/**************************************************
+********** VARIABLES
+***************************************************/
+
+
+$bg-color               :       rgba(245, 220, 197, 0.6);
+
+$colors                 :       (
+                                    "primary"   :       rgba(80, 24, 239, 0.8),
+                                    "secondary" :       rgba(32, 211, 168, 0.8),
+                                    "teriary"   :       rgba(233, 88, 201, 0.8)
+                                );
+
+
+$primary--color         :       rgba(80, 24, 239, 0.8);
+$secondary--color       :       rgba(32, 211, 168, 0.8);
+$tertiary--color        :       rgba(233, 88, 201, 0.8);
+
+
+$primary--font-stack    :       "Wavehaus";
+$body--font-stack       :       "Crete Round", Arial;
+$secondary--font-stack  :       "Source Code Pro";
+
+$primary--font-color    :       #000;
+$secondary--font-color  :       rgba(178, 178, 178, 0.8);
+
+$font-size              :       16px;
+$line-height            :       1.2;
+$letter-spacing         :       normal;
+
+$font-weights           :       (
+                                    "light"     : 300,
+                                    "regular"   : 500,
+                                    "bold"      : 900
+                                );
+
+$font-sizes             :       (
+                                    "sm"        : 0.875em,
+                                    "md"        : 1em,
+                                    "lg"        : 2em,
+                                    "xl"        : 3.6em,
+                                    "xxl"       : 6em,
+                                    "xxxl"      : 25em   
+                                );
+
+
+$alignments             :       (
+                                    flex-end,
+                                    center,
+                                    baseline
+                                );
+
+$brk-sm                 :       500px;
+
+$brk                    :       (
+                                    "xs"    :     0px,
+                                    "sm"    :   500px,
+                                    "md"    :   800px,
+                                    "lg"    :  1200px,
+                                    "xl"    :  1500px 
+                                );
+
+
+$particle-sizes         :       (
+                                    "sm"     :   0.5,
+                                    "md"     :     1,
+                                    "lg"     :     2,
+                                    "xl"     :     3
+                                );
