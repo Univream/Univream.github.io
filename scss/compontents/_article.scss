@@ -4,9 +4,8 @@
 
 
 .article {
-    margin: 50vh 0;
-    padding: px-to-em(10px);
-    width: 100vw;
+    margin: 80vh 0;
+    padding: px-to-em(20px);
     position: relative;
 
     @include e(body) {
@@ -21,6 +20,8 @@
         
         @include e(text) {
             padding: px-to-em(5px);
+            font-size: map-get($font-sizes, "md");
+            color: $article-color;
             font-weight: map-get($font-weights, "regular");
             margin: px-to-em(10px);
         }
@@ -31,7 +32,7 @@
 
 
     @include e(backmesh) {
-        z-index: -2;
+        z-index: -1;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -39,6 +40,4 @@
         right: 0;
         background: $article-bg-color;
     }
-
-    
 }

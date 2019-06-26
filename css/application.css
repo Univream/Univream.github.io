@@ -64,11 +64,12 @@
 ********** BASE
 ***************************************************/
 body {
+  width: 100%;
   margin: 0;
   background-color: white;
-  font-family: "Crete Round", Arial;
-  line-height: 1.2;
+  line-height: 1.5;
   letter-spacing: normal;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3 {
@@ -77,16 +78,15 @@ h1, h2, h3 {
 }
 
 p, article {
-  font-family: "Crete Round", Arial;
+  font-family: "Wavehaus";
 }
 
 /**************************************************
 ********** ARTICLE
 ***************************************************/
 .article {
-  margin: 50vh 0;
-  padding: 0.625em;
-  width: 100vw;
+  margin: 80vh 0;
+  padding: 1.25em;
   position: relative;
 }
 
@@ -103,66 +103,20 @@ p, article {
 
 .article__body__text {
   padding: 0.3125em;
+  font-size: 1.8em;
+  color: rgba(138, 133, 133, 0.8);
   font-weight: 500;
   margin: 0.625em;
 }
 
 .article__backmesh {
-  z-index: -2;
+  z-index: -1;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(245, 220, 197, 0.4);
-}
-
-/**************************************************
-********** PARTICLE
-***************************************************/
-.particle {
-  position: relative;
-  z-index: -10;
-}
-
-.particle--sm {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-}
-
-.particle--md {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-}
-
-.particle--lg {
-  -webkit-transform: scale(2.4);
-          transform: scale(2.4);
-}
-
-.particle--xl {
-  -webkit-transform: scale(3.7);
-          transform: scale(3.7);
-}
-
-.particle--primary {
-  fill: rgba(80, 24, 239, 0.8);
-  color: rgba(80, 24, 239, 0.8);
-}
-
-.particle--secondary {
-  fill: rgba(32, 211, 168, 0.8);
-  color: rgba(32, 211, 168, 0.8);
-}
-
-.particle--teriary {
-  fill: rgba(233, 88, 201, 0.8);
-  color: rgba(233, 88, 201, 0.8);
-}
-
-.particle--quaternary {
-  fill: rgba(237, 52, 74, 0.8);
-  color: rgba(237, 52, 74, 0.8);
+  background: rgba(245, 220, 197, 0.9);
 }
 
 /**************************************************
