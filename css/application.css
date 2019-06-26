@@ -52,6 +52,14 @@
   /* IE 10+ */
 }
 
+.backlayer {
+  z-index: -100;
+  position: fixed;
+  top: 0;
+  right: -70px;
+  left: 70px;
+}
+
 /**************************************************
 ********** BASE
 ***************************************************/
@@ -237,7 +245,7 @@ p, article {
 ********** NAV
 ***************************************************/
 .nav {
-  margin: 21.875em 0 15.625em;
+  margin: 18.75em 0 15.625em;
 }
 
 .nav__title {
@@ -245,9 +253,20 @@ p, article {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  font-size: 2em;
+  font-size: 4em;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
+  display: inline-block;
+  width: 60vw;
+  letter-spacing: 2px;
+  font-size: 4em;
+  text-align: left;
+}
+
+@media (min-width: 500px) {
+  .nav__title {
+    font-size: 6em;
+  }
 }
 
 .nav__title::before {
@@ -256,19 +275,5 @@ p, article {
   display: block;
   height: 10px;
   width: 70px;
-}
-
-.nav__title--main {
-  display: inline-block;
-  width: 60vw;
-  letter-spacing: 2px;
-  font-size: 3.6em;
-  text-align: left;
-}
-
-@media (min-width: 500px) {
-  .nav__title--main {
-    font-size: 6em;
-  }
 }
 /*# sourceMappingURL=application.css.map */

@@ -4,12 +4,21 @@
 
 
 .nav {
-    margin: px-to-em(350px) 0 px-to-em(250px);
+    margin: px-to-em(300px) 0 px-to-em(250px);
 
     @include e(title) {
         user-select: none;
-        font-size: map-get($font-sizes, "lg");
+        font-size: map-get($font-sizes, "xl");
         transform: rotate(-90deg);
+        display: inline-block;
+        width: 60vw;
+        letter-spacing: 2px;
+        font-size: map-get($font-sizes, "xl");
+        text-align: left;
+
+        @media (min-width: map-get($brk, "sm")) {
+            font-size: map-get($font-sizes, "xxl");
+        }
 
         @include before {
             content: "";
@@ -17,17 +26,6 @@
             display: block;
             height: 10px;
             width: 70px;
-        }
-
-        @include m(main) {
-            display: inline-block;
-            width: 60vw;
-            letter-spacing: 2px;
-            font-size: map-get($font-sizes, "xl");
-            text-align: left;
-            @media (min-width: map-get($brk, "sm")) {
-                font-size: map-get($font-sizes, "xxl");
-            }
         }
     }
 }
