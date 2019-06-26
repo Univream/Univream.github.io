@@ -16,3 +16,16 @@
         @content;
     }
 }
+
+@mixin after {
+    &::after {
+        @content;
+    }
+}
+
+
+@mixin before {
+    &::before {
+        @content;
+    }
+}

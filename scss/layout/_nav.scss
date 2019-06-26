@@ -9,8 +9,15 @@
     @include e(title) {
         user-select: none;
         font-size: map-get($font-sizes, "lg");
-        transition: .4s cubic-bezier(.5,.69,.17,.97);
-        margin: 0;
+        transform: rotate(-90deg);
+
+        @include before {
+            content: "";
+            background-color: #000;
+            display: block;
+            height: 10px;
+            width: 70px;
+        }
 
         @include m(main) {
             display: inline-block;
@@ -22,13 +29,5 @@
                 font-size: map-get($font-sizes, "xxl");
             }
         }
-    }
-
-    @include e(bar) {
-        margin: px-to-em(20px) 0 px-to-em(20px) px-to-em(10px);
-        padding: 0;
-        float: left;
-        overflow-x: scroll; 
-        width: 95%
     }
 }

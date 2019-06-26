@@ -56,6 +56,7 @@
 ********** BASE
 ***************************************************/
 body {
+  margin: 0;
   background-color: white;
   font-family: "Crete Round", Arial;
   line-height: 1.2;
@@ -75,10 +76,9 @@ p, article {
 ********** ARTICLE
 ***************************************************/
 .article {
-  margin: 3.75em 0.625em;
+  margin: 50vh 0;
   padding: 0.625em;
-  max-width: 500px;
-  width: 70vw;
+  width: 100vw;
   position: relative;
 }
 
@@ -107,23 +107,6 @@ p, article {
   left: 0;
   right: 0;
   background: rgba(245, 220, 197, 0.4);
-  border-left: 5px solid #000;
-}
-
-.article--flex-end {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-.article--center {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.article--baseline {
-  -ms-flex-item-align: baseline;
-      align-self: baseline;
 }
 
 /**************************************************
@@ -250,23 +233,6 @@ p, article {
 /**************************************************
 ********** MAIN
 ***************************************************/
-.main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-preferred-size: 0;
-      flex-basis: 0;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 /**************************************************
 ********** NAV
 ***************************************************/
@@ -280,9 +246,16 @@ p, article {
       -ms-user-select: none;
           user-select: none;
   font-size: 2em;
-  -webkit-transition: 0.4s cubic-bezier(0.5, 0.69, 0.17, 0.97);
-  transition: 0.4s cubic-bezier(0.5, 0.69, 0.17, 0.97);
-  margin: 0;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.nav__title::before {
+  content: "";
+  background-color: #000;
+  display: block;
+  height: 10px;
+  width: 70px;
 }
 
 .nav__title--main {
@@ -297,13 +270,5 @@ p, article {
   .nav__title--main {
     font-size: 6em;
   }
-}
-
-.nav__bar {
-  margin: 1.25em 0 1.25em 0.625em;
-  padding: 0;
-  float: left;
-  overflow-x: scroll;
-  width: 95%;
 }
 /*# sourceMappingURL=application.css.map */
