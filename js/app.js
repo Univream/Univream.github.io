@@ -7,6 +7,7 @@
     }
 
     const isARCompatible = (function () {
+        return true; 
         try {
             var a = document.createElement("a");
             return a.relList.supports("ar");
