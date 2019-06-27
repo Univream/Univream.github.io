@@ -44,8 +44,8 @@
   z-index: -100;
   position: fixed;
   top: 0;
-  right: -70px;
-  left: 70px;
+  right: 0;
+  left: 0;
 }
 
 /**************************************************
@@ -180,6 +180,14 @@ p, article {
   background: rgba(219, 19, 43, 0.8);
 }
 
+.footbar__item--background {
+  background: rgba(245, 220, 197, 0.8);
+}
+
+.footbar__item--background:active, .footbar__item--background:hover {
+  background: rgba(238, 194, 154, 0.8);
+}
+
 .footbar__item__text {
   font-size: 3.75em;
   line-height: 0.9;
@@ -263,6 +271,14 @@ p, article {
 
 .list__item--quaternary--filled {
   background: rgba(237, 52, 74, 0.8);
+}
+
+.list__item--background {
+  border: 3px solid rgba(245, 220, 197, 0.8);
+}
+
+.list__item--background--filled {
+  background: rgba(245, 220, 197, 0.8);
 }
 
 /**************************************************

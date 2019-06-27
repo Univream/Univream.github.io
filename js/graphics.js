@@ -14,14 +14,14 @@ function Graphic(window, T, element, path) {
         requestAnimationFrame(render);
         if(molecule && molecule.rotation) {
             //molecule.rotation.x = scrollPositionY / 1000.0;
-            molecule.rotation.y = scrollPositionY / 1800.0;    
+            molecule.rotation.y = (scrollPositionY / 2200.0) || 0.0;    
         }
         renderer.render(scene, camera);
     }
 
     var molecule, scrollPositionY;
     const scene = new T.Scene();
-    const camera = new T.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
+    const camera = new T.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 1, 1000);
     const renderer = new T.WebGLRenderer({ alpha: true, antialias: true });
     const light = new T.PointLight(0xFFFFFF, 1, 100, 0.4);
     const loader = new T.OBJLoader();
@@ -31,7 +31,7 @@ function Graphic(window, T, element, path) {
     light.position.set(30, 50, 40);
     scene.add(light);
 
-    camera.position.z = 20;
+    camera.position.z = 35;
 
     loader.load(
         path,
@@ -55,7 +55,8 @@ function Graphic(window, T, element, path) {
                 child.geometry.normalsNeedUpdate = true;
             }
         });
-        obj.position.x = 2;
+        obj.rotation.x = 2;
+        obj.position.x = 3.4;
         scene.add(obj);
     }
 

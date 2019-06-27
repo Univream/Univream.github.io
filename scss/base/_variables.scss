@@ -3,8 +3,7 @@
 ***************************************************/
 
 
-$bg-color               :       rgba(255, 255, 255, 1);
-
+$bg-color               :       white;
 
 $article-color          :       rgba(138, 133, 133, 0.8);
 $article-bg-color       :       rgba(245, 220, 197, 0.8);
@@ -13,7 +12,8 @@ $colors                 :       (
                                     "primary"   :       rgba(80, 24, 239, 0.8),
                                     "secondary" :       rgba(32, 211, 168, 0.8),
                                     "teriary"   :       rgba(233, 88, 201, 0.8), 
-                                    "quaternary":       rgba(237, 52, 74, 0.8)
+                                    "quaternary":       rgba(237, 52, 74, 0.8),
+                                    "background":       rgba(245, 220, 197, 0.8)
                                 );
 
 
