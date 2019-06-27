@@ -39,19 +39,6 @@
 /**************************************************
 ********** UTILITES
 ***************************************************/
-.list::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-  /* Chrome/Safari/Webkit */
-}
-
-.list {
-  scrollbar-width: none;
-  /* Firefox */
-  -ms-overflow-style: none;
-  /* IE 10+ */
-}
-
 .backlayer {
   z-index: -100;
   position: fixed;
@@ -86,12 +73,14 @@ p, article {
 ***************************************************/
 .article {
   margin: 80vh 0;
+  min-height: 40vh;
   padding: 1.25em;
   position: relative;
 }
 
 .article__body {
   position: relative;
+  z-index: 5;
 }
 
 .article__body__title {
@@ -110,13 +99,86 @@ p, article {
 }
 
 .article__backmesh {
-  z-index: -1;
+  z-index: 0;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(245, 220, 197, 0.9);
+  background: rgba(245, 220, 197, 0.8);
+}
+
+/**************************************************
+********** Footbar
+***************************************************/
+.footbar {
+  padding: 1.875em 0 1.875em 3.75em;
+  margin: 0.625em 0;
+  overflow-x: scroll;
+}
+
+.footbar__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: space-between;
+  margin: 0.9375em;
+  min-width: 750px;
+}
+
+.footbar__item {
+  display: block;
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+  color: white;
+  border-radius: 40px;
+  margin-right: 50px;
+  vertical-align: baseline;
+  font-size: 3.5em;
+  font-family: "Wavehaus";
+  font-weight: 900;
+}
+
+.footbar__item--primary {
+  background: rgba(80, 24, 239, 0.8);
+}
+
+.footbar__item--primary:active, .footbar__item--primary:hover {
+  background: rgba(62, 14, 198, 0.8);
+}
+
+.footbar__item--secondary {
+  background: rgba(32, 211, 168, 0.8);
+}
+
+.footbar__item--secondary:active, .footbar__item--secondary:hover {
+  background: rgba(25, 167, 133, 0.8);
+}
+
+.footbar__item--teriary {
+  background: rgba(233, 88, 201, 0.8);
+}
+
+.footbar__item--teriary:active, .footbar__item--teriary:hover {
+  background: rgba(227, 43, 186, 0.8);
+}
+
+.footbar__item--quaternary {
+  background: rgba(237, 52, 74, 0.8);
+}
+
+.footbar__item--quaternary:active, .footbar__item--quaternary:hover {
+  background: rgba(219, 19, 43, 0.8);
 }
 
 /**************************************************

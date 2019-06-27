@@ -1,0 +1,46 @@
+/**************************************************
+********** Footbar
+***************************************************/
+
+
+.footbar {
+    padding: px-to-em(30px) 0 px-to-em(30px) px-to-em(60px);
+    margin: px-to-em(10px) 0;
+    
+    
+    overflow-x: scroll; 
+
+    @include e(list) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-items: space-between;
+        margin: px-to-em(15px);
+        min-width: 750px;
+    }
+    
+    @include e(item) {
+        display: block;
+        width: 150px;
+        height: 150px;
+        padding: 20px;
+        color:white;
+        border-radius: 40px;
+        margin-right: 50px;
+        vertical-align: baseline;
+        font-size: px-to-em(56px);
+        font-family: $primary--font-stack;
+        font-weight: map-get($font-weights, bold);
+
+        @each $name, $color in $colors {
+            @include m($name) {
+                background: $color;
+                &:active,
+                &:hover {
+                    background: darken($color, 10%);
+                }
+            }
+        }    
+    }
+}

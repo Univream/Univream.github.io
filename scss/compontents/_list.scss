@@ -4,7 +4,6 @@
 
 
 .list {
-    @extend %disable-scrollbars;
     display: flex;
     justify-content: space-between;
     list-style-type: none;
