@@ -11,24 +11,48 @@
     -webkit-overflow-scrolling: touch;
 
     @include e(list) {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-items: space-between;
+        // display: flex;
+        // flex-direction: row;
+        // flex-wrap: nowrap;
+        // align-items: center;
+        // justify-items: space-between;
         margin: px-to-em(15px);
-        min-width: 950px;
+        white-space: nowrap;
+        //min-width: 950px;
     }
     
     @include e(item) {
-        display: block;
+        display: inline-block;
         width: 180px;
         height: 180px;
-        padding: 35px;
+        padding: 45px;
         color:white;
-        border-radius: 60px;
-        margin-right: 50px;
-        vertical-align: baseline;
+        border-radius: 50%;
+        margin-right: 90px;
+        vertical-align: middle;
+
+        @include e(arlink) {
+            display: block;
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        @include e(arbadge) {
+            vertical-align: middle;
+            // will be set to 'inline-block' in case of user agent support
+            display: none;
+            width: 210px;
+            height: 210px;
+            margin-right: 80px;
+            border: 10px solid black;
+            padding: 20px;
+            background: white;
+            overflow: hidden;
+            img {
+                display: block;
+                width: 100%; 
+            }
+        }
         
         @each $name, $color in $colors {
             @include m($name) {
@@ -41,6 +65,7 @@
         }
         
         @include e(text) {
+            white-space: normal;
             display: block;
             font-size: px-to-em(60px);
             line-height: 0.85;
