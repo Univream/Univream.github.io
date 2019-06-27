@@ -7,6 +7,7 @@
     padding: px-to-em(30px) 0 px-to-em(30px) px-to-em(60px);
     margin: px-to-em(50px) 0;
     overflow-x: scroll; 
+    -webkit-overflow-scrolling: touch;
 
     @include e(list) {
         display: flex;

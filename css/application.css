@@ -116,6 +116,7 @@ p, article {
   padding: 1.875em 0 1.875em 3.75em;
   margin: 3.125em 0;
   overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .footbar__list {
@@ -280,7 +281,7 @@ footer .note__code {
 }
 
 footer .note__gpImage {
-  width: 200px;
+  width: 150px;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
   margin: 1.25em auto;

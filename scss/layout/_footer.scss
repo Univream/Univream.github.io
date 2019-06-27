@@ -9,7 +9,7 @@ footer {
             margin: 3em auto;
         }
         @include e(gpImage) {
-            width: 200px;
+            width: 150px;
             filter: grayscale(1);
             margin: px-to-em(20px) auto;
         }
