@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**************************************************
 ********** FONTS
 ***************************************************/
@@ -113,7 +114,7 @@ p, article {
 ***************************************************/
 .footbar {
   padding: 1.875em 0 1.875em 3.75em;
-  margin: 0.625em 0;
+  margin: 3.125em 0;
   overflow-x: scroll;
 }
 
@@ -132,21 +133,18 @@ p, article {
           align-items: center;
   justify-items: space-between;
   margin: 0.9375em;
-  min-width: 750px;
+  min-width: 950px;
 }
 
 .footbar__item {
   display: block;
-  width: 150px;
-  height: 150px;
-  padding: 20px;
+  width: 180px;
+  height: 180px;
+  padding: 35px;
   color: white;
-  border-radius: 40px;
+  border-radius: 60px;
   margin-right: 50px;
   vertical-align: baseline;
-  font-size: 3.5em;
-  font-family: "Wavehaus";
-  font-weight: 900;
 }
 
 .footbar__item--primary {
@@ -179,6 +177,18 @@ p, article {
 
 .footbar__item--quaternary:active, .footbar__item--quaternary:hover {
   background: rgba(219, 19, 43, 0.8);
+}
+
+.footbar__item__text {
+  font-size: 3.75em;
+  line-height: 0.9;
+  font-family: "Wavehaus";
+  font-weight: 900;
+  color: white;
+}
+
+.footbar__item__text:visited  {
+  color: white;
 }
 
 /**************************************************
@@ -257,6 +267,25 @@ p, article {
 /**************************************************
 ********** MAIN
 ***************************************************/
+footer .note {
+  padding: 25px 10px;
+  margin: 40vh 0 0;
+}
+
+footer .note__code {
+  display: block;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin: 3em auto;
+}
+
+footer .note__gpImage {
+  width: 200px;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  margin: 1.25em auto;
+}
+
 /**************************************************
 ********** NAV
 ***************************************************/
@@ -279,7 +308,7 @@ p, article {
   text-align: left;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 800px) {
   .nav__title {
     font-size: 6em;
   }
