@@ -6,5 +6,5 @@
         console.error("Error while getting model name");
     }
     var graphicDIV = document.getElementById("graphic");
-    Graphic(window, THREE, graphicDIV, `../graphics/${matches[1]}.obj`);
+    Graphic(window, THREE, graphicDIV, `../graphics/${matches[1]}.drc`);
 }());

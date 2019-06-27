@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/KAHAS/Desktop/Projects/Websites/Kohlenstoff/js/draco/src/draco/metadata/geometry_metadata.cc
+draco/metadata/geometry_metadata.h
+/Users/KAHAS/Desktop/Projects/Websites/Kohlenstoff/js/draco/src/draco/metadata/draco/metadata/geometry_metadata.h
+utility
+-
+
+/Users/KAHAS/Desktop/Projects/Websites/Kohlenstoff/js/draco/src/draco/metadata/metadata.cc
+draco/metadata/metadata.h
+/Users/KAHAS/Desktop/Projects/Websites/Kohlenstoff/js/draco/src/draco/metadata/draco/metadata/metadata.h
+utility
+-
+
+draco/src/draco/core/hash_utils.h
+stdint.h
+-
+functional
+-
+
+draco/src/draco/metadata/geometry_metadata.h
+draco/metadata/metadata.h
+draco/src/draco/metadata/draco/metadata/metadata.h
+
+draco/src/draco/metadata/metadata.h
+cstring
+-
+memory
+-
+string
+-
+unordered_map
+-
+vector
+-
+draco/core/hash_utils.h
+draco/src/draco/metadata/draco/core/hash_utils.h
+

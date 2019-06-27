@@ -9,22 +9,24 @@ function Graphic(window, T, element, path) {
         return;
     }
 
-
     function render() {
         requestAnimationFrame(render);
         if(molecule && molecule.rotation) {
-            //molecule.rotation.x = scrollPositionY / 1000.0;
+            molecule.rotation.x = (scrollPositionY / 4000.0) || 0.0;
             molecule.rotation.y = (scrollPositionY / 2200.0) || 0.0;    
         }
         renderer.render(scene, camera);
     }
 
-    var molecule, scrollPositionY;
+    var molecule, scrollPositionY, scrollPositionX;
     const scene = new T.Scene();
     const camera = new T.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 1, 1000);
     const renderer = new T.WebGLRenderer({ alpha: true, antialias: true });
     const light = new T.PointLight(0xFFFFFF, 1, 100, 0.4);
-    const loader = new T.OBJLoader();
+    
+    THREE.DRACOLoader.setDecoderPath( 'js/draco_decoders/' );
+    THREE.DRACOLoader.setDecoderConfig( { type: 'js' } );
+    const loader = new T.DRACOLoader();
     
     renderer.setSize(window.innerWidth, window.innerHeight);
     element.appendChild(renderer.domElement);
@@ -35,7 +37,7 @@ function Graphic(window, T, element, path) {
 
     loader.load(
         path,
-        onOBJLoaded,
+        onDRCLoaded,
         function(xhr) {
             // console.log("Loading...");
         },
@@ -44,30 +46,28 @@ function Graphic(window, T, element, path) {
         }
     );
     
-    function onOBJLoaded(obj) {
-        molecule = obj;
-        obj.traverse( function( child ) {
-            if ( child instanceof THREE.Mesh ) {
-                // modify geometry for correct shadows and textures
-                child.material = new THREE.MeshLambertMaterial({color: 0xeeeeee});
-                child.geometry.computeFaceNormals();
-                child.geometry.computeVertexNormals();
-                child.geometry.normalsNeedUpdate = true;
-            }
-        });
-        obj.rotation.x = 2;
-        obj.position.x = 3.4;
-        scene.add(obj);
+    function onDRCLoaded(geometry) {
+        geometry.computeVertexNormals();
+        var material = new T.MeshLambertMaterial({color: 0xeeeeeee});
+        var mesh = new T.Mesh( geometry, material );
+        mesh.castShadow = true;
+        mesh.receiveShadow = true;
+        mesh.rotation.x = 1.7;
+        mesh.position.x = 3.4;
+        molecule = mesh;
+        scene.add( mesh );
+        // Release the cached decoder module.
+        THREE.DRACOLoader.releaseDecoderModule();
     }
 
     window.onscroll = function() {
         scrollPositionY = window.scrollY / 1.0;
     }
 
-    window.addEventListener('resize', () => {
+    window.onresize = function () {
         renderer.setSize(window.innerWidth, window.innerHeight);
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
-    });
+    };
     render();
 }

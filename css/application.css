@@ -40,6 +40,19 @@
 /**************************************************
 ********** UTILITES
 ***************************************************/
+.footbar::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  /* Chrome/Safari/Webkit */
+}
+
+.footbar {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
+}
+
 .backlayer {
   z-index: -100;
   position: fixed;
@@ -180,11 +193,11 @@ p, article {
   background: rgba(219, 19, 43, 0.8);
 }
 
-.footbar__item--background {
+.footbar__item--default {
   background: rgba(245, 220, 197, 0.8);
 }
 
-.footbar__item--background:active, .footbar__item--background:hover {
+.footbar__item--default:active, .footbar__item--default:hover {
   background: rgba(238, 194, 154, 0.8);
 }
 
@@ -273,11 +286,11 @@ p, article {
   background: rgba(237, 52, 74, 0.8);
 }
 
-.list__item--background {
+.list__item--default {
   border: 3px solid rgba(245, 220, 197, 0.8);
 }
 
-.list__item--background--filled {
+.list__item--default--filled {
   background: rgba(245, 220, 197, 0.8);
 }
 
@@ -315,13 +328,13 @@ footer .note__gpImage {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  font-size: 4em;
+  font-size: 4.3em;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   display: inline-block;
   width: 60vw;
   letter-spacing: 2px;
-  font-size: 4em;
+  font-size: 4.3em;
   text-align: left;
 }
 
