@@ -23,5 +23,7 @@
     }
     
     var graphicDIV = document.getElementById("graphic");
-    Graphic(window, THREE, graphicDIV, `../graphics/${matches[1]}.drc`);
+    if(graphicDIV) {
+        Graphic(window, THREE, graphicDIV, `../graphics/${matches[1]}.drc`);
+    }
 }());

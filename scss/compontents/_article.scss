@@ -8,6 +8,7 @@
     min-height: 40vh;
     padding: px-to-em(20px);
     position: relative;
+    
 
     @include e(body) {
         position: relative;
@@ -41,5 +42,11 @@
         left: 0;
         right: 0;
         background: $article-bg-color;
+
+        @each $name, $color in $colors {
+            @include m($name) {
+                background: $color;
+            }
+        }
     }
 }
