@@ -7,7 +7,6 @@
     }
 
     const isARCompatible = (function () {
-        return true; 
         try {
             var a = document.createElement("a");
             return a.relList.supports("ar");
@@ -23,9 +22,6 @@
         $("#MoleculeAR").css("display", "inline-block");
     }
     
-
-
-
     var graphicDIV = document.getElementById("graphic");
     Graphic(window, THREE, graphicDIV, `../graphics/${matches[1]}.drc`);
 }());
