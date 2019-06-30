@@ -31,7 +31,7 @@
 
 
 
-    function Scoller(elementSelector) {
+    function Scroller(elementSelector) {
         $(elementSelector).on("mousewheel", function (evt){
             $(elementSelector)[0].scrollLeft -= evt.deltaY;
         });
