@@ -6,6 +6,8 @@
         console.error("Error while getting model name");
     }
 
+    Scroller("html, body");
+
     const isARCompatible = (function () {
         try {
             var a = document.createElement("a");
