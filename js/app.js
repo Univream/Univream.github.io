@@ -28,4 +28,12 @@
     if(graphicDIV) {
         Graphic(window, THREE, graphicDIV, `../graphics/${matches[1]}.drc`);
     }
+
+
+
+    function Scoller(elementSelector) {
+        $(elementSelector).on("mousewheel", function (evt){
+            $(elementSelector)[0].scrollLeft -= evt.deltaY;
+        });
+    }
 }());
