@@ -4,11 +4,16 @@
 
 
 .article {
-    margin: 80vh 0;
+    box-sizing: border-box;
     min-height: 40vh;
     padding: px-to-em(20px);
     position: relative;
     
+    @include layout-margin(70vh, 70vh) {
+        vertical-align: bottom;
+        width: 70vw;
+        max-width: 1500px;
+    }
 
     @include e(body) {
         position: relative;
@@ -22,6 +27,7 @@
         }
         
         @include e(text) {
+            white-space: normal;
             padding: px-to-em(5px);
             font-size: map-get($font-sizes, "md");
             color: $article-color;
@@ -49,4 +55,5 @@
             }
         }
     }
+
 }

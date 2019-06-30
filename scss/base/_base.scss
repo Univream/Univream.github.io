@@ -3,13 +3,18 @@
 ***************************************************/
 
 
+
 body {
-    width: 100%;
     margin: 0;
     background-color: $bg-color; 
     line-height: $line-height;
     letter-spacing: $letter-spacing;
     -webkit-font-smoothing: antialiased;
+    @media(min-width: map-get($brk, lg)) {
+        white-space: nowrap;
+        overflow-x: auto; 
+        -webkit-overflow-scrolling: touch;
+    }
 }
 
 h1, h2, h3 {

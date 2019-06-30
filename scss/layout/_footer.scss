@@ -1,13 +1,10 @@
 footer {
+    @include layout-margin(0, 0);
     .note {
+        vertical-align: bottom;
+        box-sizing: border-box;
+        @include layout-margin(40vh, 0);
         padding: 25px 10px;
-        margin: 40vh 0 0;
-        @include e(code){
-            display: block;
-            font-size: map-get($font-sizes, sm);
-            font-weight: map-get($font-weights, regular);
-            margin: 3em auto;
-        }
         @include e(gpImage) {
             width: 150px;
             filter: grayscale(1);

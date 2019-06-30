@@ -3,15 +3,23 @@
 ***************************************************/
 
 
+header {
+    @include layout-margin(0, 0) {
+        vertical-align: top;
+    }
+}
+
 .nav {
-    margin: px-to-em(300px) 0 px-to-em(250px);
+    @include layout-margin(px-to-em(200px), px-to-em(200px));
 
     @include e(title) {
         user-select: none;
         font-size: map-get($font-sizes, "xl");
-        transform: rotate(-90deg);
+        @media(max-width: map-get($brk, lg)) {
+            transform: rotate(-90deg);
+        }
         display: inline-block;
-        width: 60vw;
+        width: 50vw;
         letter-spacing: 2px;
         font-size: map-get($font-sizes, "xl");
         text-align: left;
@@ -21,11 +29,16 @@
         }
 
         @include before {
-            content: "";
-            background-color: #000;
+            content: "Jakob / Jonas / Justus / Hakim";
+            white-space: nowrap;
+            font-size: map-get($font-sizes, xs);
+            font-family: monospace;
             display: block;
-            height: 10px;
-            width: 70px;
+            color: #444;
+
+            @media(min-width: map-get($brk, lg)) {
+                font-size: map-get($font-sizes, sm);
+            }
         }
     }
 }

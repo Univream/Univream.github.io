@@ -6,19 +6,18 @@
 .footbar {
     @extend %disable-scrollbars;
     padding: px-to-em(30px) 0;
-    margin: px-to-em(50px) 0;
     overflow-x: scroll; 
     -webkit-overflow-scrolling: touch;
 
+    @include layout-margin(px-to-em(50px), 0) {
+        height: auto;
+    }
+
     @include e(list) {
-        // display: flex;
-        // flex-direction: row;
-        // flex-wrap: nowrap;
-        // align-items: center;
-        // justify-items: space-between;
-        margin: px-to-em(15px);
+        @include layout-margin(px-to-em(15px), px-to-em(15px)) {
+            height: auto;
+        }
         white-space: nowrap;
-        //min-width: 950px;
     }
     
     @include e(item) {
@@ -28,8 +27,9 @@
         padding: 45px;
         color: white;
         border-radius: 50%;
-        margin-right: 60px;
+        margin-right: px-to-em(60px);
         vertical-align: middle;
+
 
         @include e(text) {
             text-decoration: underline;

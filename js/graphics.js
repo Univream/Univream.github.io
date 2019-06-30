@@ -12,8 +12,8 @@ function Graphic(window, T, element, path) {
     function render() {
         requestAnimationFrame(render);
         if(molecule && molecule.rotation) {
-            molecule.rotation.x = (scrollPositionY / 4000.0) || 0.0;
-            molecule.rotation.y = (scrollPositionY / 2200.0) || 0.0;    
+            molecule.rotation.x = ((scrollPositionY + scrollPositionX) / 4000.0) || 0.0;
+            molecule.rotation.y = ((scrollPositionY + scrollPositionX) / 2200.0) || 0.0;    
         }
         renderer.render(scene, camera);
     }
@@ -33,7 +33,7 @@ function Graphic(window, T, element, path) {
     light.position.set(30, 50, 40);
     scene.add(light);
 
-    camera.position.z = 35;
+    camera.position.z = 22;
 
     loader.load(
         path,
@@ -62,6 +62,7 @@ function Graphic(window, T, element, path) {
 
     window.onscroll = function() {
         scrollPositionY = window.scrollY / 1.0;
+        scrollPositionX = window.scrollX / 1.0;
     }
 
     window.onresize = function () {

@@ -29,3 +29,13 @@
         @content;
     }
 }
+
+@mixin layout-margin($TL, $BR) {
+    margin: $TL 0 $BR 0;
+    @media(min-width: map-get($brk, lg)) {
+        display: inline-block;
+        margin: 0 $BR 0 $TL;
+        height: 100vh;
+        @content;
+    }
+}
