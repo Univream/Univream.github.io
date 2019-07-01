@@ -25,7 +25,14 @@
             position: relative;
             font-weight: map-get($font-weights, "light");
         }
-        
+
+        @include e(img) {
+            width: 100%;
+            @include layout-margin(auto, auto) {
+                height: 100%;
+            }
+        }
+
         @include e(text) {
             white-space: normal;
             padding: px-to-em(5px);

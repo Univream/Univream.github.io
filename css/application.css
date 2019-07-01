@@ -124,6 +124,20 @@ p, article {
   font-weight: 300;
 }
 
+.article__body__img {
+  width: 100%;
+  margin: auto 0 auto 0;
+}
+
+@media (min-width: 1200px) {
+  .article__body__img {
+    display: inline-block;
+    margin: 0 auto 0 auto;
+    height: 100vh;
+    height: 100%;
+  }
+}
+
 .article__body__text {
   white-space: normal;
   padding: 0.3125em;
