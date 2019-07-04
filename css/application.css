@@ -401,6 +401,7 @@ main {
 }
 
 footer {
+  vertical-align: bottom;
   margin: 0 0 0 0;
 }
 
