@@ -109,6 +109,7 @@ p, article {
     vertical-align: bottom;
     width: 70vw;
     max-width: 1500px;
+    overflow-y: hidden;
   }
 }
 
