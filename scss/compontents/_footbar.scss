@@ -29,6 +29,7 @@
         border-radius: 50%;
         margin-right: px-to-em(60px);
         vertical-align: middle;
+        transition: .4s ease-in-out;
 
 
         @include e(text) {
@@ -48,14 +49,15 @@
         
         @each $name, $color in $colors {
             @include m($name) {
-                background: $color;
+                @include context-blur-bg($name);
                 &:active,
                 &:hover {
                     background: darken($color, 10%);
+                    transform: scale(1.2);
                 }
             }
         }
-        
+
         @include e(arlink) {
             display: block;
             width: 100%;

@@ -39,3 +39,8 @@
         @content;
     }
 }
+
+@mixin context-blur-bg($name) {
+    backdrop-filter: saturate(150%) blur(10px);
+    background: map-get($colors, $name);
+}
